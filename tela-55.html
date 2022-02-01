@@ -1,0 +1,94 @@
+<div style="height: 60px; width: 100%; background-color: #a9e5ea; ">
+    <img style="height: 60px; width: 460px; position: absolute; right: 0px;" src="recursos/imgs/H1.png">
+    <p style="position: absolute; color: #294666; left: 40px; top: 20px; font-size: 11px;">TÓPICO
+        <strong>03</strong>
+    </p>
+    <p style="position: absolute; color: #294666; left: 105px; top: 20px; font-size: 11px;">O CUIDADO EM SAÚDE SOB A
+        LÓGICA DO TRABALHO INTEGRADOS</p>
+</div>
+<div style="margin-top: 18px; margin-left: 41px; width: 808px;">
+    <p style="font-size: 14px;">Algumas propostas advindas da Cartilha da Política Nacional de Humanização (BRASIL,
+        2007):
+    </p>
+    <img class="animate__animated animate__backInLeft" src="recursos/imgs/T55.png" style="width: 808px;">
+    <div class="animate__animated animate__backInUp" style="margin-top: 8px; margin-left: 96px;">
+        <img id="botao_1" src="recursos/imgs/T55a.png" style="width: 248px; height: 47px;">
+        <img id="botao_2" src="recursos/imgs/T55b.png" style="width: 248px;height: 47px;margin-left: 133px;">
+    </div>
+</div>
+<footer style="height: 19px;/* width: 100%; */background-color: #cce3f1;">
+    <p style="position: absolute;color: #294666;margin-left: 42px;top: 2px;font-size: 11px;">Minicurso: </p>
+    <p style="position: absolute;color: #294666;margin-left: 110px;top: 2px;font-size: 11px;">O CUIDADO EM SAÚDE SOB A
+        LÓGICA DO TRABALHO INTEGRADO</p>
+</footer>
+<div id="janela_1"
+    style="position: absolute; width: 888px; height: 501px; top: 0px; background-color: rgb(0, 6, 35); opacity: 0.93; display: none;">
+    <p style="color: white;font-size: 18px;margin-left: 40px;margin-top: 40px;">Reflita a partir deste exemplo:</p>
+    <div style="margin-left: 81px;margin-top: 30px;">
+        <img style="width: 50px;height: 36px;opacity: 1;" src="recursos/imgs/quote-1.png">
+        <p style="color: white;font-size: 16px;width: 653px;margin-top: -39px;margin-left: 39px;">“Se a pessoa com
+            hipertensão é
+            deprimida ou não, se está isolada, se está desempregada ou não, tudo isso interfere no
+            desenvolvimento da doença. O diagnóstico pressupõe uma certa regularidade, uma repetição. Mas para que
+            se
+            realize uma
+            clínica adequada é preciso saber, além do que o sujeito apresenta de igual, o que ele apresenta de
+            diferente, de
+            singular, inclusive, um conjunto de sinais e sintomas que somente nele se expressam de determinado modo.
+            Com
+            isso,
+            abrem-se inúmeras possibilidades de intervenção, e é possível propor tratamentos muito melhores com a
+            participação das
+            pessoas envolvidas”
+        </p>
+        <img style="margin-top: -80px;margin-left: 680px;width: 50px;height: 36px;opacity: 1;"
+            src="recursos/imgs/quote-2.png">
+    </div>
+    <p style="color: #FFDD00;font-size: 18px;margin-left: 40px;margin-top: -10px;width: 808px;">Na prática, a adesão
+        a
+        essa forma de
+        cuidado, implica em estabelecer uma rotina que
+        envolva:</p>
+    <div style=" margin-left: 141px; width: 606px;">
+        <p style="color: white;font-size: 18px;">- Diálogo qualificado entre profissionais das equipes envolvidas e
+            dessas com o usuário
+            em questão.</p>
+        <p style="color: white;font-size: 18px;margin-top: -14px;">- Tomada de decisões compartilhadas.</p>
+    </div>
+    <p style="color:  white;font-size: 18px;margin-left: 40px;width: 808px;color: #FFDD00;">Amplia-se com isso a
+        capacidade de adesão e autonomia do usuário para se estabeleça um
+        compromisso mútuo do
+        cuidado.</p>
+</div>
+<div id="janela_2"
+    style="position: absolute; width: 888px; height: 501px; top: 0px; background-color: rgb(0, 6, 35); opacity: 0.93; display: none;">
+    <p style="color: white;font-size: 18px;margin-left: 40px;margin-top: 40px;">Reflita a partir deste texto:</p>
+    <p style="color: white;font-size: 16px;margin-left: 107px;margin-top: 123px;width: 675px;">Pode ser desenvolvido
+        para
+        atender às necessidades de um indivíduo, de famílias ou de grupos. Constitui-se a partir dos
+        seguintes momentos, a partir da seleção de caso que se adeque à elaboração do PTS: diagnóstico; definição de
+        metas para
+        cumprimento das propostas que emergiram, com negociação de prazos entre equipe e usuário; divisão de
+        responsabilidades,
+        com clara definição das tarefas alocadas a cada envolvido; reavaliação para discussão para monitoramento e
+        readequações,
+        quando necessário.</p>
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer')
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

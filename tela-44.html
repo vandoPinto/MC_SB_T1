@@ -1,0 +1,84 @@
+<div style="height: 60px; width: 100%; background-color: #a9e5ea; ">
+    <img style="height: 60px; width: 460px; position: absolute; right: 0px;" src="recursos/imgs/H1.png">
+    <p style="position: absolute; color: #294666; left: 40px; top: 20px; font-size: 11px;">TÓPICO
+        <strong>03</strong>
+    </p>
+    <p style="position: absolute; color: #294666; left: 105px; top: 20px; font-size: 11px;">O CUIDADO EM SAÚDE SOB A
+        LÓGICA DO TRABALHO INTEGRADOS</p>
+</div>
+<div class="coluna-esquerda altura-1_1 centro">
+    <p style="margin-top: 43px;margin-left: 41px;width: 808px;font-size: 14px;">A seguir, apresentaremos alguns
+        aportes teóricos que podem auxiliar na busca de estratégias e soluções para momentos
+        desafiantes, evidenciados ao se colocar em prática certas iniciativas, a exemplo da implementação de
+        reuniões integradas
+        em uma UBS. Os elementos considerados pilares que sustentam a colaboração (D´AMOUR et al., 2005) são:
+    </p>
+    <img class="animate__animated animate__backInLeft" src="recursos/imgs/T44.png" style="width: 764px;margin-top: 10px;margin-left: 60px;">
+</div>
+<div>
+    <div id="botao_1"
+        style="position: absolute;width: 180px;height: 80px;background-color: rgb(140, 24, 18,0);left: 61px;top: 194px;cursor: pointer;">
+    </div>
+    <div id="botao_2"
+        style="position: absolute;width: 180px;height: 80px;background-color: rgb(140, 24, 18,0);left: 243px;top: 194px;cursor: pointer;">
+    </div>
+    <div id="botao_3"
+        style="position: absolute;width: 180px;height: 80px;background-color: rgb(140, 24, 18,0);left: 425px;top: 194px;cursor: pointer;">
+    </div>
+    <div id="botao_4"
+        style="position: absolute;width: 180px;height: 80px;background-color: rgb(140, 24, 18,0);left: 610px;top: 194px;cursor: pointer;">
+    </div>
+</div>
+<div id="janela_1" style="position: absolute; margin-top: 250px; margin-left: 128px; width: 634px;">
+    <p style="font-size: 14px;">Quando um grupo passa a compartilhar os mesmos objetivos e metas na dinâmica do
+        trabalho, é possível colocar
+        o usuário
+        na centralidade do cuidado, e não os profissionais envolvidos e os processos, como muitas vezes ocorre.</p>
+</div>
+<div id="janela_2" style="position: absolute; margin-top: 250px; margin-left: 128px; width: 634px;">
+    <p style="font-size: 14px;">Nesse momento, se estabelece a parceria, conceito mais relacionado à atuação
+        propriamente dita, e que impulsiona a
+        comunicação efetiva, confiança e respeito mútuo. Quando isso ocorre, um profissional valoriza e reconhece o
+        trabalho do
+        outro.</p>
+</div>
+<div id="janela_3" style="position: absolute; margin-top: 250px; margin-left: 128px; width: 624px;">
+    <p style="font-size: 14px;">Assim, os profissionais reconhecem suas limitações e a necessidade do outro para
+        efetivação de determinadas ações.
+        Emerge então a interdependência, conceito que deixa explicitada a existência de objetivos comuns e da potência
+        do
+        trabalho em equipe para atingi-los.</p>
+</div>
+<div id="janela_4" style="position: absolute; margin-top: 230px; margin-left: 128px; width: 634px;">
+    <p style="font-size: 14px;">Para que todos esses elementos mencionados se tornem viáveis, é fundamental que haja
+        equilíbrio nas relações de poder,
+        de modo que todos os membros de uma equipe ou entre equipes se sintam empoderados, tornando as relações
+        interprofissionais saudáveis e mais sólidas (COSTA, 2017). Tornar as relações mais horizontais possibilita a
+        criação da
+        identidade de grupo. A percepção de igualdade entre membros de um grupo pode reduzir preconceitos e favorecer a
+        aproximação entre participantes (AMADO E VILELA, 2016).</p>
+</div>
+<footer style="height: 19px;/* width: 100%; */background-color: #cce3f1;">
+    <p style="position: absolute;color: #294666;margin-left: 42px;top: 2px;font-size: 11px;">Minicurso: </p>
+    <p style="position: absolute;color: #294666;margin-left: 110px;top: 2px;font-size: 11px;">O CUIDADO EM SAÚDE SOB
+        A
+        LÓGICA DO TRABALHO INTEGRADO</p>
+</footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer')
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>
