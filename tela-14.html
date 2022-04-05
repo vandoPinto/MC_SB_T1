@@ -142,6 +142,7 @@
 <script>
     $(() => {
         let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+
         apagarJanelas();
         let botoes = $(document).find('[id^=botao]').map((index, botao) => {
             $(botao).hover(() => {
